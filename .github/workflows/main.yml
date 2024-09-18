@@ -16,8 +16,10 @@ jobs:
         - run: echo "Hello World!"
         - run: echo ${{env.MY_VARIABLE}}
         - run: echo "La valeur du secret est :" "(attention, celle-ci sera dissimulée automatiquement)" ${{secrets.MY_SECRET}}
+        - name: Création du fichier hello.txt
         - run: echo "Hello World!" > hello.txt
         - run: ls 
+        - name: Affichage du contenu du fichier hello.txt
         - run: cat hello.txt
     
     createFile:
