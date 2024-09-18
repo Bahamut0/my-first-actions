@@ -18,6 +18,8 @@ jobs:
         - run: echo ${{secrets.MY_SECRET}}
         # - run: test -f hello.txt || touch hello.txt
         - run: echo "Hello World!" > hello.txt
+        - run: ls 
+        - run: cat hello.txt
     
     # createFile:
     # name: Create A File
