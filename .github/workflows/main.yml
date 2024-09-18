@@ -9,7 +9,7 @@ env:
   MY_VARIABLE: 'This is a variable'
 
 jobs:
-    build:
+    exercices:
         runs-on: ubuntu-latest
         
         steps:
@@ -21,17 +21,17 @@ jobs:
         - run: ls 
         - run: cat hello.txt
     
-    # createFile:
-    # name: Create A File
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - uses: actions/checkout@v2
-    #   - uses: 1arp/create-a-file-action@0.4.5
-    #     with:
-    #       path: './'
-    #       isAbsolutePath: false
-    #       file: 'hello.txt'
-    #       content: |
-    #         Hello
-    #         World
+    createFile:
+      name: Create A File
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: 1arp/create-a-file-action@0.4.5
+          with:
+            path: './'
+            isAbsolutePath: false
+            file: 'hello2.txt'
+            content: Hello World
+        - run: cat hello2.txt
+
 
