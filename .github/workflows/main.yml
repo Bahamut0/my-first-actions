@@ -15,5 +15,5 @@ jobs:
         steps:
         - run: echo "Hello World!"
         - run: echo ${{env.MY_VARIABLE}}
-        # - name: Checkout repository
-        #   uses: actions/checkout@v4
+        - run: echo ${{secrets.MY_SECRET}}
+
