@@ -15,8 +15,7 @@ jobs:
         steps:
         - run: echo "Hello World!"
         - run: echo ${{env.MY_VARIABLE}}
-        - run: echo ${{secrets.MY_SECRET}}
-        # - run: test -f hello.txt || touch hello.txt
+        - run: echo "La valeur du secret est :" "(attention, celle-ci sera dissimulée automatiquement)" ${{secrets.MY_SECRET}}
         - run: echo "Hello World!" > hello.txt
         - run: ls 
         - run: cat hello.txt
